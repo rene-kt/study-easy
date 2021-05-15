@@ -1,0 +1,90 @@
+                body {
+                    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    overflow-x: hidden;
+                    background-color: #131219;
+                }
+                
+                li {
+                    list-style: none;
+                }
+                
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-weight: 700;
+                }
+                
+                @media only screen and (min-device-width: 750px) {
+                    .cover {
+                        position: relative;
+                        display: flex;
+                        place-items: center;
+                    }
+                    .masthead {
+                        padding-top: 10rem;
+                        padding-bottom: calc(10rem - 72px);
+                        background: #32189d;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-attachment: scroll;
+                        background-size: cover;
+                        height: 80vh;
+                        display: flex;
+                        place-items: center;
+                    }
+                    .masthead h2 {
+                        font-size: 1.8em;
+                        position: absolute;
+                        top: 5%;
+                        right: 30%;
+                    }
+                    .masthead h3 {
+                        position: absolute;
+                        left: 20%;
+                        top: 20%;
+                        font-size: 2em;
+                    }
+                    .masthead p {
+                        position: absolute;
+                        bottom: 40%;
+                        left: 0;
+                        right: 0;
+                        color: #fff;
+                        font-size: 1.5em;
+                    }
+                }
+                
+                @media only screen and (max-device-width: 750px) {
+                    .masthead {
+                        padding-top: 10rem;
+                        padding-bottom: calc(10rem - 72px);
+                        background: #32189d;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-attachment: scroll;
+                        background-size: cover;
+                        height: 80vh;
+                    }
+                    .cover {
+                        display: block;
+                    }
+                    .masthead h2 {
+                        text-align: center;
+                        font-size: 1.8em;
+                    }
+                    .masthead h3 {
+                        text-align: center;
+                        margin-top: 10%;
+                        font-size: 2em;
+                    }
+                    .masthead p {
+                        margin-top: 30%;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 1.5em;
+                    }
+                }
