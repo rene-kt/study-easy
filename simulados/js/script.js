@@ -166,14 +166,13 @@ function startTimer(time) {
         }
         if (time < 0) { //if timer is less than 0
             clearInterval(counter); //clear counter
-            timeText.textContent = "Time Off"; //change the time text to time off
+            timeText.textContent = "Acabou o tempo"; //change the time text to time off
             const allOptions = option_list.children.length; //getting all option items
             let correcAns = questions[que_count].answer; //getting correct answer from array
             for (i = 0; i < allOptions; i++) {
                 if (option_list.children[i].textContent == correcAns) { //if there is an option which is matched to an array answer
                     option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
                     option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
-                    console.log("Time Off: Auto selected correct answer.");
                 }
             }
             for (i = 0; i < allOptions; i++) {
@@ -198,6 +197,6 @@ function startTimerLine(time) {
 
 function queCounter(index) {
     //creating a new span tag and passing the question number and total question
-    let totalQueCounTag = '<span><p>' + index + '</p> of <p>' + questions.length + '</p> Questions</span>';
+    let totalQueCounTag = '<span><p>' + index + '</p> de <p>' + questions.length + '</p> questões</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag; //adding new span tag inside bottom_ques_counter
 }

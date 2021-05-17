@@ -212,7 +212,7 @@ section {
 }
 
 section .que_text {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -423,8 +423,18 @@ footer button.show {
         pointer-events: none;
         transition: all 0.3s ease;
     }
+    .quiz_box {
+        width: 90%;
+        background: #fff;
+        border-radius: 5px;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
     .result_box {
         background: #fff;
+        height: 95%;
         border-radius: 5px;
         display: flex;
         padding: 25px 30px;
@@ -436,6 +446,10 @@ footer button.show {
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s ease;
+    }
+    section .que_text {
+        font-size: 12px;
+        font-weight: 600;
     }
     .result_box .buttons button {
         margin: 0 10px;
