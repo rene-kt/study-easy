@@ -1,46 +1,9 @@
-// local storage stores strings so we use JSON to stringify for storage and parse to get out of storage
-(function($) {
-    "use strict"; // Start of use strict
-
-
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function() {
-        $('.navbar-collapse').collapse('hide');
-    });
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-        target: '#mainNav',
-        offset: 75
-    });
-
-    // Collapse Navbar
-    var navbarCollapse = function() {
-        if ($("#mainNav").offset().top > 100) {
-            $("#mainNav").addClass("navbar-scrolled");
+$(function() {
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 10) {
+            $('.navbar').addClass('active');
         } else {
-            $("#mainNav").removeClass("navbar-scrolled");
-        }
-    };
-    // Collapse now if page is not at top
-    navbarCollapse();
-    // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
-
-    // Magnific popup calls
-    $('#portfolio').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Carregando imagem #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1]
-        },
-        image: {
-            tError: '<a href="%url%">A imagem #%curr%</a> não pode ser carregada.'
+            $('.navbar').removeClass('active');
         }
     });
-
-})(jQuery); // End of use strict
+});

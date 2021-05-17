@@ -276,3 +276,18 @@ body {
     background: #ffffff !important;
     color: #32189d !important;
 }
+
+@media only screen and (max-device-width: 450px) {
+    .form {
+        z-index: 15;
+        position: relative;
+        background: #ffffff;
+        width: 95%;
+        height: 80%;
+        border-radius: 4px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        margin: 100px auto 10px;
+        overflow: hidden;
+    }
+}
