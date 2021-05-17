@@ -28,7 +28,8 @@ body {
 
 .exit_btn {
     position: absolute;
-    top: 60%;
+    top: 50%;
+    margin-top: 100px;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
@@ -447,6 +448,39 @@ footer button.show {
         outline: none;
         border-radius: 5px;
         border: 1px solid #32189d;
+        transition: all 0.3s ease;
+    }
+    .start_btn button {
+        font-size: 25px;
+        font-weight: 500;
+        color: #32189d;
+        width: 300px;
+        padding: 15px 30px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background: #fff;
+        cursor: pointer;
+    }
+    .exit_btn button {
+        font-size: 25px;
+        font-weight: 500;
+        color: #32189d;
+        width: 300px;
+        padding: 15px 30px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background: #fff;
+        cursor: pointer;
+    }
+    .quiz_box {
+        width: 100%;
+        background: #fff;
+        border-radius: 5px;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        pointer-events: none;
         transition: all 0.3s ease;
     }
 }
