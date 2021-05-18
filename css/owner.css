@@ -139,7 +139,6 @@
                 .container-box .box {
                     position: relative;
                     width: 350px;
-                    height: 550px;
                     padding: 40px;
                     background: #15141B;
                     border-radius: 5px;
@@ -202,6 +201,9 @@
                 }
                 
                 @media only screen and (min-device-width: 750px) {
+                    .navbar-mobile {
+                        display: none !important;
+                    }
                     body {
                         overflow-x: hidden;
                     }
@@ -285,6 +287,9 @@
                 }
                 
                 @media only screen and (max-device-width: 750px) {
+                    .navbar-desktop {
+                        display: none !important;
+                    }
                     .logo-img {
                         width: 175px !important;
                         height: 100px !important;

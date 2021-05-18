@@ -2,6 +2,14 @@ body {
     background: #32189d !important;
 }
 
+.navbar-desktop {
+    width: 100%;
+}
+
+.navbar-mobile {
+    width: 100%;
+}
+
 .overlay,
 .form-panel.one:before {
     position: absolute;
