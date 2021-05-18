@@ -27,6 +27,28 @@
                     font-weight: 700;
                 }
                 
+                .navbar-fixed-top {
+                    background-color: transparent;
+                    transition: background-color 200ms linear;
+                    color: white;
+                    width: 100%;
+                    height: 12%;
+                }
+                
+                .navbar-fixed-top.scrolled {
+                    background-color: #fff !important;
+                    transition: background-color 200ms linear;
+                    width: 100%;
+                }
+                
+                .navbar-fixed-top.scrolled a {
+                    color: black!important;
+                }
+                
+                .navbar-fixed-top.scrolled a:hover {
+                    color: #32189d!important;
+                }
+                
                 .section-home {
                     padding: 0;
                     margin: 0;
@@ -263,6 +285,19 @@
                 }
                 
                 @media only screen and (max-device-width: 750px) {
+                    .navbar-fixed-top {
+                        background-color: transparent;
+                        transition: background-color 200ms linear;
+                        color: white;
+                        width: 100%;
+                        height: auto;
+                    }
+                    .navbar-fixed-top.scrolled {
+                        background-color: #fff !important;
+                        transition: background-color 200ms linear;
+                        width: 100%;
+                        height: auto;
+                    }
                     body {
                         overflow-x: hidden;
                     }
