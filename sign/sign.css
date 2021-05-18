@@ -5,7 +5,7 @@ body {
 .overlay,
 .form-panel.one:before {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     display: none;
     background: rgba(0, 0, 0, 0.8);
@@ -21,7 +21,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    margin: 100px auto 10px;
+    margin: 200px auto 10px;
     overflow: hidden;
 }
 

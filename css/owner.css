@@ -286,7 +286,8 @@
                 
                 @media only screen and (max-device-width: 750px) {
                     .logo-img {
-                        width: 180px !important;
+                        width: 175px !important;
+                        height: 100px !important;
                     }
                     .navbar-fixed-top {
                         background-color: transparent;
