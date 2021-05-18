@@ -39,6 +39,7 @@
                     background-color: #fff !important;
                     transition: background-color 200ms linear;
                     width: 100%;
+                    border-bottom: 0.5px solid black;
                 }
                 
                 .navbar-fixed-top.scrolled a {
@@ -300,6 +301,7 @@
                         transition: background-color 200ms linear;
                         width: 100%;
                         height: auto;
+                        border-bottom: 0.5px solid black;
                     }
                     body {
                         overflow-x: hidden;
