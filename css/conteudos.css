@@ -1,0 +1,87 @@
+                    body,
+                    html {
+                        overflow-x: hidden;
+                        background-color: #32189d!important;
+                    }
+                    
+                     ::selection {
+                        color: #fff !important;
+                        background: black !important;
+                    }
+                    
+                    .section-conteudo {
+                        padding: 200px 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        position: relative;
+                        widows: 100%;
+                        min-height: 100vh;
+                        background: #32189d;
+                    }
+                    
+                    .section-conteudo h2 {
+                        text-align: justify;
+                        color: #fff;
+                        font-weight: 700;
+                        margin: 5%;
+                    }
+                    
+                    .section-conteudo h3 {
+                        text-align: justify;
+                        color: #fff;
+                        font-size: 1.2em;
+                        font-weight: 700;
+                        margin: 5%;
+                    }
+                    
+                    .section-conteudo .links {
+                        text-align: justify;
+                        background: #8e7adf;
+                        width: 90%;
+                        color: #fff;
+                        font-weight: 700;
+                        margin-left: 5%;
+                        margin-top: 10px;
+                        font-size: 1.2em;
+                        text-decoration: none;
+                    }
+                    
+                    .section-conteudo a {
+                        text-align: justify;
+                        color: #fff;
+                        font-weight: 700;
+                        margin: 5%;
+                        font-size: 1.2em;
+                        text-decoration: none;
+                    }
+                    
+                    .section-conteudo a:hover {
+                        text-align: justify;
+                        color: #32189d;
+                        font-weight: 700;
+                        margin: 5%;
+                        font-size: 1.2em;
+                        text-decoration: none;
+                    }
+                    
+                    .videos-aulas {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                    
+                    .videos-aulas iframe {
+                        margin-left: 50px;
+                        margin-top: 50px;
+                        width: 40%;
+                        height: 50vh;
+                    }
+                    
+                    @media only screen and (max-device-width: 500px) {
+                        .videos-aulas iframe {
+                            margin-top: 50px;
+                            margin-left: 0;
+                            width: 90%;
+                        }
+                    }

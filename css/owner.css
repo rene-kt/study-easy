@@ -266,7 +266,7 @@
                     background-color: #3d2599;
                 }
                 
-                @media only screen and (min-device-width: 750px) {
+                @media only screen and (min-device-width: 800px) {
                     .navbar-mobile {
                         display: none !important;
                     }
@@ -352,7 +352,7 @@
                     }
                 }
                 
-                @media only screen and (max-device-width: 750px) {
+                @media only screen and (max-device-width: 800px) {
                     .conteudo-box .box .icon-box {
                         position: relative;
                         color: #32189d!important;
