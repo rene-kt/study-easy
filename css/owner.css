@@ -150,6 +150,7 @@
                     text-align: center;
                     margin: 20px;
                     color: #fff;
+                    cursor: pointer;
                 }
                 
                 .conteudo-box .box:hover .icon-box {

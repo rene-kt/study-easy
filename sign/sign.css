@@ -1,5 +1,6 @@
 body {
-    background: #32189d !important;
+    background: rgb(2, 0, 36) !important;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(50, 24, 157, 1) 35%, rgba(65, 39, 168, 1) 100%) !important;
 }
 
 .navbar-desktop {

@@ -18,8 +18,8 @@
                         widows: 100%;
                         min-height: 100vh;
                         background: #32189d;
-                        background: rgb(2, 0, 36);
-                        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(50, 24, 157, 1) 35%, rgba(147, 128, 222, 1) 100%);
+                        background: rgb(50, 24, 157);
+                        background: linear-gradient(90deg, rgba(50, 24, 157, 1) 35%, rgba(147, 128, 222, 1) 100%);
                     }
                     
                     .section-conteudo h2 {
