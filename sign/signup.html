@@ -49,6 +49,126 @@
                 height: 100px !important;
             }
         }
+        /* The snackbar - position it at the top and in the middle of the screen */
+        
+        #snackbar-sucess {
+            visibility: hidden;
+            /* Hidden by default. Visible on click */
+            min-width: 250px;
+            /* Set a default minimum width */
+            margin-left: -125px;
+            /* Divide value of min-width by 2 */
+            background-color: #333;
+            /* Black background color */
+            color: #fff;
+            /* White text color */
+            text-align: center;
+            /* Centered text */
+            border-radius: 2px;
+            /* Rounded borders */
+            padding: 16px;
+            /* Padding */
+            position: fixed;
+            /* Sit on top of the screen */
+            z-index: 1000;
+            /* Add a z-index if needed */
+            left: 50%;
+            /* Center the snackbar */
+            top: 100px;
+            /* 100px from the top */
+        }
+        
+        #snackbar-failed {
+            visibility: hidden;
+            /* Hidden by default. Visible on click */
+            min-width: 250px;
+            /* Set a default minimum width */
+            margin-left: -125px;
+            /* Divide value of min-width by 2 */
+            background-color: #333;
+            /* Black background color */
+            color: #fff;
+            /* White text color */
+            text-align: center;
+            /* Centered text */
+            border-radius: 2px;
+            /* Rounded borders */
+            padding: 16px;
+            /* Padding */
+            position: fixed;
+            /* Sit on top of the screen */
+            z-index: 1000;
+            /* Add a z-index if needed */
+            left: 50%;
+            /* Center the snackbar */
+            top: 100px;
+            /* 100px from the top */
+        }
+        /* Show the snackbar when clicking on a button (class added with JavaScript) */
+        
+        #snackbar-sucess.show {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        
+        #snackbar-failed.show {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        /* An
+        /* Animations to fade the snackbar in and out */
+        
+        @-webkit-keyframes fadein {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+            to {
+                top: 100px;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadein {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+            to {
+                top: 100px;
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes fadeout {
+            from {
+                top: 100px;
+                opacity: 1;
+            }
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
+        
+        @keyframes fadeout {
+            from {
+                top: 100px;
+                opacity: 1;
+            }
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -133,7 +253,7 @@
     </nav>
 
 
-    <div class="form">
+    <div class="form" id="login">
         <div class="form-toggle"></div>
         <div class="form-panel one">
             <div class="form-header">
@@ -142,16 +262,16 @@
             <div class="form-content">
                 <form>
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input id="username" type="text" name="username" required="required" />
+                        <label for="email">Email</label>
+                        <input id="email" type="text" name="email" required="required" />
                     </div>
                     <div class="form-group">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" required="required" />
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" required="required" />
                     </div>
 
                     <div class="form-group">
-                        <button type="submit">Login</button>
+                        <button type="button" onclick="login()">Login</button>
                     </div>
                 </form>
             </div>
@@ -162,13 +282,19 @@
             </div>
             <div class="form-content">
                 <form>
+
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input id="username" type="text" name="username" required="required" />
+                        <label for="name">Nome</label>
+                        <input id="name" type="text" name="name" required="required" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuario">Username</label>
+                        <input id="usuario" type="text" name="usuario" required="required" />
                     </div>
                     <div class="form-group">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" required="required" />
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" required="required" />
                     </div>
 
                     <div class="form-group">
@@ -176,7 +302,7 @@
                         <input id="email" type="email" name="email" required="required" />
                     </div>
                     <div class="form-group">
-                        <button type="submit">Cadastrar</button>
+                        <button type="button" onclick="register()">Cadastrar</button>
                     </div>
                 </form>
             </div>
@@ -185,11 +311,108 @@
 
 
 
+    <!-- The actual snackbar -->
+    <div id="snackbar-sucess">Você foi cadastrado com sucesso!</div>
+
+
+    <!-- The actual snackbar -->
+    <div id="snackbar-failed">Login e/ou senha incorretos</div>
 
 
 </body>
 
+<script>
+    const login = async() => {
+
+
+
+        var formElement = document.querySelector('form');
+        var formData = new FormData(formElement);
+
+
+        var object = {};
+        formData.forEach(function(value, key) {
+            object[key] = value;
+        });
+        var json = JSON.stringify(object);
+
+
+        console.log(json);
+
+        const response = await fetch('http://localhost:6060/Login', {
+            method: 'POST',
+            body: json,
+            headers: {
+                'Content-Type': 'application/json',
+
+            }
+        });
+        const myJson = await response.json();
+
+        if (myJson['error'] != null) {
+            var x = document.getElementById("snackbar-failed");
+
+            // Add the "show" class to DIV
+            x.className = "show";
+
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        } else {
+            window.location.href = "../index.html";
+        }
+
+
+
+
+    }
+
+    const register = async() => {
+
+
+
+        var formElement = document.querySelectorAll('form');
+        var formData = new FormData(formElement[1]);
+
+
+        var object = {};
+        formData.forEach(function(value, key) {
+            object[key] = value;
+        });
+        var json = JSON.stringify(object);
+
+
+
+        const response = await fetch('http://localhost:6060/Register', {
+            method: 'POST',
+            body: json,
+            headers: {
+                'Content-Type': 'application/json',
+
+            }
+        });
+        const myJson = await response.json();
+
+        console.log(myJson);
+
+        var x = document.getElementById("snackbar-sucess");
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+
+
+
+
+    }
+</script>
+
 <script src="sign.js    "></script>
+
+<script src="../api.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
 </script>
