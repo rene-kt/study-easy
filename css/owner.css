@@ -267,6 +267,79 @@
                     background-color: #3d2599;
                 }
                 
+                .contact-section {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .contact-box {
+                    position: relative;
+                    width: 90%;
+                    height: auto;
+                    padding: 40px;
+                    background: #fff;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                    border-radius: 25px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                }
+                
+                .contact-content {
+                    text-align: justify;
+                    padding-left: 10%;
+                }
+                
+                .contact-content h2 {
+                    text-transform: uppercase;
+                    font-weight: 1000;
+                    text-align: center;
+                    letter-spacing: 5px;
+                    padding: 15px;
+                }
+                
+                .contact-content strong {
+                    color: #32189d;
+                    font-weight: 700;
+                }
+                
+                .contact-content p {
+                    font-size: 2.5vh;
+                }
+                
+                .image-text {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                .contact-box .contact-image {
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .contact-box .contact-image img {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                .contact-bg {
+                    padding: 3rem 0;
+                    background: #32189d;
+                }
+                
+                .contact-icons {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                
+                .contact-icons div {
+                    padding: 2rem 1rem 0 0;
+                }
+                
+                .contact-icons i {
+                    font-size: 2rem;
+                }
+                
                 @media only screen and (min-device-width: 800px) {
                     .navbar-mobile {
                         display: none !important;
@@ -498,5 +571,53 @@
                     }
                     .imgBx img {
                         width: 320px;
+                    }
+                    .contact-section {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .contact-box {
+                        position: relative;
+                        width: 90%;
+                        height: auto;
+                        padding: 40px;
+                        background: #fff;
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                        border-radius: 25px;
+                        box-sizing: border-box;
+                        overflow: hidden;
+                    }
+                    .contact-content {
+                        text-align: justify;
+                        display: block;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .contact-content h2 {
+                        text-transform: uppercase;
+                    }
+                    .contact-content p {
+                        font-size: 2.5vh;
+                    }
+                    .image-text {
+                        display: block;
+                    }
+                    .contact-box .contact-image {
+                        display: block;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .contact-box .contact-image img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    .contact-icons {
+                        display: flex;
+                        justify-content: center !important;
+                        align-items: center !important;
+                    }
+                    .contact-icons i {
+                        font-size: 6vw;
                     }
                 }
